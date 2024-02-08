@@ -1,5 +1,4 @@
 
-
 $(document).ready(function () {
 
   let origin = '';
@@ -235,143 +234,144 @@ $(document).ready(function () {
 
   const states = [{
     label: "Andaman & Nicobar Islands",
-    value: "an"
+    value: "an",
   },
   {
     label: "Arunachal Pradesh", 
-    value: "ar"
+    value: "ar",
   },
   {
     label: "Andhra Pradesh",
-    value: "apekx"
+    value: "apekx",
   },
   {
     label: "Assam",
-    value: "as"
+    value: "as",
   },
   {
     label: "Bihar",
-    value: "br"
+    value: "br",
   },
   {
     label: "Chhattisgarh",
-    value: "cg"
+    value: "cg",
   },
   {
     label: "Chandigarh",
-    value: "ch"
+    value: "ch",
+    
   },
   {
     label: "Delhi",
-    value: "dl"
+    value: "dl",
   },
   {
     label: "Dadra And Nagar Haveli And Daman And Diu",
-    value: "dd"
+    value: "DD",
   },
   {
     label: "Goa",
-    value: "ga"
+    value: "ga",
   },
   {
     label: "Gujarat",
-    value: "gj"
+    value: "gj",
   },
   {
     label: "Himachal Pradesh",
-    value: "hp"
+    value: "hp",
   },
   {
     label: "Haryana",
-    value: "hr"
+    value: "hr",
   },
   {
     label: "Jharkhand",
-    value: "jh"
+    value: "jh",
   },
   {
     label: "Jammu And Kashmir",
-    value: "jk"
+    value: "jk",
   },
   {
     label: "Karnataka",
-    value: "ka"
+    value: "ka",
   },
   {
     label: "Kerala",
-    value: "kl"
+    value: "kl",
   },
   {
     label: "Ladakh",
-    value: "ld"
+    value: "ld",
   },
   {
     label: "Lakshadweep",
-    value: "lk"
+    value: "lk",
   },
   {
     label: "Maharashtra",
-    value: "mitra"
+    value: "mitra",
   },
   {
     label: "Meghalaya",
-    value: "ml"
+    value: "ml",
   },
   {
     label: "Manipur",
-    value: "mn"
+    value: "mn",
   },
   {
     label: "Madhya Pradesh",
-    value: "mp"
+    value: "mp",
   },
   {
     label: "Mizoram",
-    value: "mz"
+    value: "mz",
   },
   {
     label: "Nagaland",
-    value: "nl"
+    value: "nl",
   },
   {
     label: "Odisha",
-    value: "od"
+    value: "od",
   },
   {
     label: "Punjab",
-    value: "pb"
+    value: "pb",
   },
   {
     label: "Pondicherry",
-    value: "py"
+    value: "py",
   },
   {
     label: "Rajasthan",
-    value: "rj"
+    value: "rj",
   },
   {
     label: "Sikkim",
-    value: "sk"
+    value: "sk",
   },
   {
     label: "Tamil Nadu",
-    value: "tn"
+    value: "tn",
   },
   {
     label: "Tripura",
-    value: "tp"
+    value: "tp",
   },
   {
     label: "Telangana",
-    value: "ts"
+    value: "ts",
   },
   {
     label: "Uttarakhand",
-    value: "uk"
+    value: "uk",
   },
   {
     label: "Uttar Pradesh",
-    value: "up"
+    value: "up",
   }];
 
   states.forEach(element => {
@@ -419,7 +419,7 @@ $(document).ready(function () {
     let  name = e.currentTarget.getAttribute('data-name');
     window.logInteractEvent('home', 'select-explore-' + slug.toLowerCase(), '', 'static-home', 'static-home', 'DeviceType', window.getDeviceTypeValue(), 'State', name, '', '', '', '');
     if(name === "NCERT"){
-      window.open('/' + slug + '/exploren/1?selectedTab=textbook', "_self");
+      window.open('/' + slug + '/exploren/1?selectedTab=home', "_self");
     } else{
       window.open('/' + slug + '/explore' ,"_self");
     }
@@ -539,7 +539,9 @@ $(window).resize(function () {
 
 
 /*===================== Start focus area slider==============*/
-
+$('#focus-area .carousel-item').carousel({
+  interval: 2000
+})
 $(document).ready(function(){  
   $('#focus-area .carousel-item').each(function () {
     // alert("Hello");
@@ -549,7 +551,42 @@ $(document).ready(function(){
     next = $(this).siblings(':first');
     }
     next.children(':first-child').clone().appendTo($(this));
-
+    
     for (var i = 0; i < minPerSlide; i++) { next=next.next(); if (!next.length) { next=$(this).siblings(':first'); } next.children(':first-child').clone().appendTo($(this)); } });
 })
 /*=====================End focus area slider==============*/
+
+$('#recipeCarousel').carousel({
+  interval: 2000
+})
+$(document).ready(function(){  
+  $('#recipeCarousel .carousel-item').each(function () {
+    // alert("Hello");
+    var minPerSlide = 3;
+    var next = $(this).next();
+    if (!next.length) {
+    next = $(this).siblings(':first');
+    }
+    next.children(':first-child').clone().appendTo($(this));
+    
+    for (var i = 0; i < minPerSlide; i++) { next=next.next(); if (!next.length) { next=$(this).siblings(':first'); } next.children(':first-child').clone().appendTo($(this)); } });
+})
+
+// $('#recipeCarousel .carousel-item').each(function(){
+//     var minPerSlide = 3;
+//     var next = $(this).next();
+//     if (!next.length) {
+//     next = $(this).siblings(':first');
+//     }
+//     next.children(':first-child').clone().appendTo($(this));
+    
+//     for (var i=0;i<minPerSlide;i++) {
+//         next=next.next();
+//         if (!next.length) {
+//         	next = $(this).siblings(':first');
+//       	}
+        
+//         next.children(':first-child').clone().appendTo($(this));
+//       }
+// });
+/*=====================End diksha dashbord===============*/
