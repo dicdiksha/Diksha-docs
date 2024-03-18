@@ -19,6 +19,7 @@ body .uwy.userway_p1 .userway_buttons_wrapper {
 #banner-modal-popup .modal-content{
     position: relative;
     padding: 15px;
+    border-radius: 15px;
 }
 
 #banner-modal-popup .modal-header{
@@ -31,17 +32,20 @@ body .uwy.userway_p1 .userway_buttons_wrapper {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 0 15px;
+    padding: 4px 15px;
+    background-color: #C0DBF1;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px
 }
 #banner-modal-popup .modal-body {
     margin-top: 30px;
     padding: 14px;
 }
 
-
 #banner-modal-popup .modal-body .popup_deatils {
     font-family: 'Mukta';
     font-size: 22px;
+    color: #000;
 
 }
 #banner-modal-popup .modal-body .popup_deatils a {
@@ -244,7 +248,7 @@ body .uwy.userway_p1 .userway_buttons_wrapper {
         box-shadow: none;
     }
     .mob-menu-header .navbar-toggler-icon {
-    background-image: url('../assets/imgs/hamburger-menu.svg');
+    background-image: url('{{site.data.tenantAssetPath[site.environment].cdnUrl}}assets/homepage/hamburger-menu.svg');
     }
     @media (max-width: 576px){
         .logo-action{
@@ -346,9 +350,9 @@ body .uwy.userway_p1 .userway_buttons_wrapper {
                 <div class="mainHeader row">
                     <div class="col-lg-2 col-md-12 col-sm-12">
                         <div  class="logo-action">
-                            <a class="navbar-brand py-0" href="/">
-                                <span class="diksha-logo-header"><img src="../assets/homepage/logo-img.png" alt="ashok-stambh"></span>
-                                <span class="diksha-logo-text"><img src="../assets/homepage/logo-text.png" alt="Diksha-logo"></span>
+                            <a class="navbar-brand py-0" href="/"> 
+                                <span class="diksha-logo-header"><img src="{{site.data.tenantAssetPath[site.environment].cdnUrl}}assets/homepage/logo-img.png" alt="ashok-stambh"></span>
+                                <span class="diksha-logo-text"><img src="{{site.data.tenantAssetPath[site.environment].cdnUrl}}assets/homepage/logo-text.png" alt="Diksha-logo"></span>
                             </a>
                         </div>
                     </div>
@@ -373,8 +377,8 @@ body .uwy.userway_p1 .userway_buttons_wrapper {
             <nav class="mob-menu-header navbar navbar-expand-lg navbar-light">
                 <div class="container-fluid">
                     <a class="navbar-brand py-0" href="/">
-                        <span class="diksha-logo-header"><img src="../assets/homepage/logo-img.png" alt="ashok-stambh"></span>
-                        <span class="diksha-logo-text"><img src="../assets/homepage/logo-text.png" alt="Diksha-logo"></span>
+                        <span class="diksha-logo-header"><img src="{{site.data.tenantAssetPath[site.environment].cdnUrl}}assets/homepage/logo-img.png" alt="ashok-stambh"></span>
+                        <span class="diksha-logo-text"><img src="{{site.data.tenantAssetPath[site.environment].cdnUrl}}assets/homepage/logo-text.png" alt="Diksha-logo"></span>
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
